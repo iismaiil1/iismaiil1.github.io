@@ -1,31 +1,125 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proyek Perumahan</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ismail807 - Web Utama</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    section.profil {
+      margin-bottom: 30px;
+    }
+    section.profil img {
+      float: left;
+      margin-right: 20px;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+    section.profil p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    section.promosi {
+      background: #004aad;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    section.portofolio ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    section.portofolio li {
+      margin: 10px 0;
+    }
+    section.portofolio a {
+      text-decoration: none;
+      color: #004aad;
+      font-weight: bold;
+    }
+    section.portofolio a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      color: #777;
+      padding: 15px;
+      font-size: 0.9rem;
+      border-top: 1px solid #ccc;
+      margin-top: 40px;
+    }
+    @media (max-width: 600px) {
+      section.profil img {
+        float: none;
+        display: block;
+        margin: 0 auto 15px auto;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="nav">
-    <button onclick="tampilkanPekerja()">Kasbon Pekerja</button>
-    <button onclick="tampilkanPengeluaran()">Dana Keluar</button>
-  </div>
-  <div class="container">
-    <div id="dataMandor" class="card">
-      <h2>Mandor: Ismail</h2>
-      <p><strong>Proyek:</strong> Pembangunan dan Servis Rumah</p>
-      <p><strong>Nilai Borongan:</strong> Rp 50.000.000</p>
-      <h3>Layanan Servis Rumah Keliling:</h3>
-      <ul>
-        <li>Servis kamar mandi</li>
-        <li>Perbaikan teras</li>
-        <li>Pemasangan keramik</li>
-      </ul>
-    </div>
-    <div id="output" class="card"></div>
-  </div>
-  <script src="script.js"></script>
+
+<header>
+  <h1>Ismail807</h1>
+  <p>Selamat datang di situs resmi saya</p>
+</header>
+
+<main>
+  <section class="profil">
+    <img src="https://avatars.githubusercontent.com/u/yourgithubid?v=4" alt="Foto Ismail" />
+    <p>
+      Halo! Saya Ismail, ahli proyek pembangunan perumahan dan penyedia jasa layanan berkualitas.  
+      Dengan pengalaman bertahun-tahun, saya siap membantu mewujudkan rumah impian Anda dan kebutuhan jasa lainnya.
+    </p>
+  </section>
+
+  <section class="promosi">
+    Selamat datang di dunia Ismail807!<br />
+    Kualitas terbaik, harga bersaing, dan pelayanan ramah siap mewujudkan impian Anda.<br />
+    Jelajahi portofolio kami dan temukan solusi tepat untuk kebutuhan Anda.
+  </section>
+
+  <section class="portofolio">
+    <h2>Portofolio & Proyek</h2>
+    <ul>
+      <li><a href="https://ismail807.github.io/">Proyek Perumahan</a></li>
+      <li><a href="https://ismail807.github.io/ismail-pijat/">Jasa Pijat Um Ismail</a></li>
+      <li><a href="https://ismail807.github.io/percobaan-html/">Percobaan HTML</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Ismail807. Semua hak dilindungi.
+</footer>
+
 </body>
 </html>
