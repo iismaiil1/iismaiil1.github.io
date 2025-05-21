@@ -2,148 +2,27 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Um Ismail - Web Utama</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-    header {
-      background-color: #004aad;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-    }
-    main {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    section.profil {
-      margin-bottom: 30px;
-    }
-    section.profil img {
-      float: left;
-      margin-right: 20px;
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      box-shadow: 0 0 8px rgba(0,0,0,0.2);
-    }
-    section.profil p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    section.promosi {
-      background: #004aad;
-      color: white;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-      font-size: 1.2rem;
-      font-weight: 600;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-    section.layanan {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    section.layanan ul {
-      padding-left: 20px;
-    }
-    section.layanan li {
-      margin: 8px 0;
-    }
-    section.portofolio ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    section.portofolio li {
-      margin: 10px 0;
-    }
-    section.portofolio a {
-      text-decoration: none;
-      color: #004aad;
-      font-weight: bold;
-    }
-    section.portofolio a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      color: #777;
-      padding: 15px;
-      font-size: 0.9rem;
-      border-top: 1px solid #ccc;
-      margin-top: 40px;
-    }
-    @media (max-width: 600px) {
-      section.profil img {
-        float: none;
-        display: block;
-        margin: 0 auto 15px auto;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Um Ismail | Pijat & Servis Profesional</title>
+  <link rel="stylesheet" href="style_main.css" />
 </head>
 <body>
-
-<header>
-  <h1>Ismail Mundong</h1>
-  <p>Selamat datang di situs resmi saya</p>
-</header>
-
-<main>
-  <section class="profil">
-    <img src="pijat.jpg" alt="Foto Ismail" />
-    <p>
-      Halo! Saya Ismail, tukang serba bisa dari Telagasana, Mundong.  
-      Saya melayani berbagai macam jasa mulai dari pembangunan rumah, pasang keramik, pengecatan, hingga pijat terapi keliling.  
-      Hubungi saya langsung lewat WhatsApp: <strong>085217774931</strong>
-    </p>
-  </section>
-
-  <section class="promosi">
-    Kualitas terbaik, harga bersaing, dan pelayanan ramah!<br />
-    Percayakan pekerjaan Anda pada tangan profesional dan berpengalaman!
-  </section>
-
-  <section class="layanan">
-    <h2>Jenis Layanan yang Saya Tawarkan:</h2>
-    <ul>
-      <li>Pasang keramik</li>
-      <li>Pengecatan dinding dan plafon</li>
-      <li>Servis rumah & renovasi kecil</li>
-      <li>Pemasangan teras & kamar mandi</li>
-      <li>Jasa Pijat Refleksi & Terapi Tradisional</li>
-    </ul>
-  </section>
-
-  <section class="portofolio">
-    <h2>Portofolio & Proyek</h2>
-    <ul>
-      <li><a href="https://ismail807.github.io/">Proyek Perumahan</a></li>
-      <li><a href="https://ismail807.github.io/ismail-pijat/">Jasa Pijat Um Ismail</a></li>
-      <li><a href="https://ismail807.github.io/percobaan-html/">Percobaan HTML</a></li>
-    </ul>
-  </section>
-</main>
-
-<footer>
-  &copy; 2025 Ismail Mundong - Telagasana. Kontak WA: 085217774931
-</footer>
-
+  <header class="hero">
+    <nav>
+      <div class="logo">Um Ismail</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="services.html">Layanan</a></li>
+        <li><a href="gallery.html">Galeri</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+    </nav>
+    <div class="hero-text"> 
+    <h1>Sentuhan yang Menyembuhkan</h1>
+      <p>Jasa pijat, servis rumah, dan karya seni lukis dalam satu layanan personal</p>
+      <a href="contact.html" class="btn-primary">Hubungi Sekarang</a>
+    </div>
+  </header>
 </body>
 </html>
