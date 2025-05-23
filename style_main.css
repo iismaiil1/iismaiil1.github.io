@@ -3,13 +3,6 @@ body {
   font-family: sans-serif;
   background: #f9f9f9;
 }
-  .container {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-
-
 
 .hero {
   background: linear-gradient(to right, #4e54c8, #8f94fb);
@@ -18,8 +11,9 @@ body {
   text-align: center;
 }
 
-nav {
+.nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
@@ -33,11 +27,18 @@ nav {
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Supaya kalau sempit*/
+ list-style: none; /* Hilangkan titik */
+ padding: 0;
   margin: 0;
-  padding: 0;
+  gap: 10px; /* Jarak antar tombol */
+  background: #222;
+  border-radius: 10px;
+  list-style: none;
 }
 
 .nav-links li a {
@@ -55,11 +56,32 @@ nav {
 
 .hero-text {
   margin-top: 40px;
+  padding: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .hero-text h1 {
   font-size: 36px;
   margin-bottom: 10px;
+
+  /* Efek teks sinar berjalan */
+  background: linear-gradient(90deg, #fff, #ddd, #fff);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2.5s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .hero-text p {
@@ -81,31 +103,54 @@ nav {
   background: #ffa726;
 }
 
-/* Batasi ukuran semua gambar */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Tambahkan responsif container */
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 10px;
+  padding: 20px;
+  font-size: 18px;
 }
 
-/* Untuk galeri */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
 }
 
-/* Untuk teks agar tidak menumpuk */
-.hero-text {
-  padding: 20px;
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
+/* Media Query: Responsif layar kecil */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center; /* Ubah dari flex-start ke center */
+  }
+
+  .nav-links {
+    flex-direction: row;  /* Ubah dari column ke row agar mendatar */
+    flex-wrap: wrap;      /* Biar bisa turun ke bawah kalau terlalu sempit */
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .btn-primary {
+    padding: 8px 16px;
+  }
+
+  .container {
+    padding: 10px;
+    font-size: 16px;
+  }
 }
