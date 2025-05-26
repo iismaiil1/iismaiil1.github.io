@@ -26,22 +26,31 @@
   </header>
 
   <!-- Tombol download -->
-  <div style="text-align: center; margin-top: 30px;">
-    <a href="https://drive.google.com/uc?export=download&id=13oHPQf8JkFDyU7Lr0B6XZb0Khm-SRiW9" target="_blank" style="text-decoration: none;">
-      <button style="
-        padding: 12px 24px;
-        background-color: #28a745;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s, transform 0.2s;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      ">
-        <i class="fa-solid fa-download" style="margin-right: 8px;"></i>
-        Download Aplikasi
-      </button>
+  <!-- Script peringatan loading -->
+<script>
+  function showLoadingAndDownload() {
+    alert("Setelah di klik tunggu proses diunduh. nek ana peringatan plikasi bahaya santai bae kerana udu aplikasi sing Play Store..."); 
+    window.location.href = "https://drive.google.com/uc?export=download&id=13oHPQf8JkFDyU7Lr0B6XZb0Khm-SRiW9";
+  }
+</script>
+
+<!-- Tombol download -->
+<div style="text-align: center; margin-top: 30px;">
+  <button onclick="showLoadingAndDownload()" style="
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  ">
+    <i class="fa-solid fa-download" style="margin-right: 8px;"></i>
+    Download Aplikasi
+  </button>
+</div>
     </a>
   </div>
 
@@ -58,7 +67,7 @@
   <p style="margin: 0; text-align: center; color: #c0392b; font-weight: bold;">
     Catatan: Layanan ini bukan pengganti penanganan medis. Jika Anda mengalami
     gejala berat atau kronis, harap segera berkonsultasi dengan tenaga medis
-    profesional, atawaha, dokter spesialis 
+    profesional. atawaha adokter
   </p>
 </div>
 
