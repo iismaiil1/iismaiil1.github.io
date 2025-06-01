@@ -48,6 +48,73 @@
       .catch(err => {
         console.error('Gagal ambil data CSV:', err);
       });
+  </script><!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Daftar Harga Um Ismail</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2a7;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>Daftar Harga Um Ismail</h1>
+  <table id="hargaTable">
+    <thead>
+      <tr><th>Produk</th><th>Harga</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const csvUrl = 'https://docs.google.com/spreadsheets/d/1gqh5yeIhlEnVxGoVdkT3SGainOLtwYDfSVlCM4BNn3Y/export?format=csv&gid=0';
+
+    fetch(csvUrl)
+      .then(res => res.text())
+      .then(csv => {
+        const rows = csv.trim().split('\n');
+        const tableBody = document.querySelector('#hargaTable tbody');
+
+        rows.slice(1).forEach(row => {
+          const cols = row.split(',');
+          const tr = document.createElement('tr');
+
+          cols.forEach(text => {
+            const td = document.createElement('td');
+            td.textContent = text;
+            tr.appendChild(td);
+          });
+
+          tableBody.appendChild(tr);
+        });
+      })
+      .catch(err => {
+        console.error('Gagal memuat data:', err);
+      });
   </script>
+</body>
+</html>
 </body>
 </html>
