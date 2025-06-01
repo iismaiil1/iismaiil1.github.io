@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Update Harga Otomatis</title>
+</head>
+<body>
+  <h1>Daftar Harga Produk</h1>
+  <table border="1" id="hargaTable">
+    <thead>
+      <tr><th>Produk</th><th>Harga</th></tr>
+    </thead>
+    <tbody>
+      <!-- Data harga akan dimunculkan di sini -->
+    </tbody>
+  </table>
+
+  <script>
+    // Ganti URL ini dengan link CSV Google Sheets kamu yang sudah di-share publik
+    const csvUrl = 'https://docs.google.com/spreadsheets/d/1gqh5yeIhlEnVxGoVdkT3SGainOLtwYDfSVlCM4BNn3Y/export?format=csv&gid=0';
+
+    // Fungsi fetch dan parse CSV
+    fetch(csvUrl)
+      .then(response => response.text())
+      .then(data => {
+        const rows = data.trim().split('\n');
+        const tableBody = document.querySelector('#hargaTable tbody');l
+        rows.forEach((row, index) => {
+          // Lewatkan baris header
+          if (index === 0) return;
+          const cols = row.split(',');
+          const tr = document.createElement('tr');
+
+          // Kolom produk
+          const tdProduk = document.createElement('td');
+          tdProduk.textContent = cols[0];
+          tr.appendChild(tdProduk);
+
+          // Kolom harga
+          const tdHarga = document.createElement('td');
+          tdHarga.textContent = cols[1];
+          tr.appendChild(tdHarga);
+
+          tableBody.appendChild(tr);
+        });
+      })
+      .catch(err => {
+        console.error('Gagal ambil data CSV:', err);
+      });
+  </script>
+</body>
+</html>
