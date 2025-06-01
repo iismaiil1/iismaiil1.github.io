@@ -2,119 +2,100 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <title>Update Harga Otomatis</title>
-</head>
-<body>
-  <h1>Daftar Harga Produk</h1>
-  <table border="1" id="hargaTable">
-    <thead>
-      <tr><th>Produk</th><th>Harga</th></tr>
-    </thead>
-    <tbody>
-      <!-- Data harga akan dimunculkan di sini -->
-    </tbody>
-  </table>
-
-  <script>
-    // Ganti URL ini dengan link CSV Google Sheets kamu yang sudah di-share publik
-    const csvUrl = 'https://docs.google.com/spreadsheets/d/1gqh5yeIhlEnVxGoVdkT3SGainOLtwYDfSVlCM4BNn3Y/edit?usp=drivesdk;
-
-    // Fungsi fetch dan parse CSV
-    fetch(csvUrl)
-      .then(response => response.text())
-      .then(data => {
-        const rows = data.trim().split('\n');
-        const tableBody = document.querySelector('#hargaTable tbody');
-
-        rows.forEach((row, index) => {
-          // Lewatkan baris header
-          if (index === 0) return;
-          const cols = row.split(',');
-          const tr = document.createElement('tr');
-
-          // Kolom produk
-          const tdProduk = document.createElement('td');
-          tdProduk.textContent = cols[0];
-          tr.appendChild(tdProduk);
-
-          // Kolom harga
-          const tdHarga = document.createElement('td');
-          tdHarga.textContent = cols[1];
-          tr.appendChild(tdHarga);
-
-          tableBody.appendChild(tr);
-        });
-      })
-      .catch(err => {
-        console.error('Gagal ambil data CSV:', err);
-      });
-  </script><!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daftar Harga Um Ismail</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 20px;
-      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
       color: #333;
     }
-    h1 {
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       text-align: center;
-      color: #2a7;
     }
-    table {
+
+    h2 {
+      color: #2b7a78;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #3fa34d;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #2f8f3e;
+    }
+
+    .roll-panel {
+      margin-top: 30px;
+      display: none;
+    }
+
+    iframe {
       width: 100%;
-      border-collapse: collapse;
-      background: #fff;
+      height: 500px;
+      border: none;
+      border-radius: 8px;
     }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: left;
+
+    .wa-footer {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
     }
-    th {
-      background: #eee;
+
+    .wa-footer:hover {
+      background-color: #20b954;
     }
   </style>
 </head>
 <body>
-  <h1>Daftar Harga Um Ismail</h1>
-  <table id="hargaTable">
-    <thead>
-      <tr><th>Produk</th><th>Harga</th></tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+
+  <div class="container">
+    <h2>Daftar Harga Layanan Um Ismail</h2>
+    <p>Untuk melihat daftar harga lengkap, klik tombol di bawah:</p>
+    <button onclick="togglePanel()">Lihat Daftar Harga</button>
+
+    <div class="roll-panel" id="panel">
+      <iframe 
+        src="https://docs.google.com/spreadsheets/d/1gqh5yeIhlEnVxGoVdkT3SGainOLtwYDfSVlCM4BNn3Y/edit?usp=drivesdk&amp;headers=false" 
+        title="Daftar Harga Um Ismail"
+        loading="lazy"></iframe>
+
+      <a class="wa-footer" href="https://wa.me/6285217774931" target="_blank">
+        Hubungi Um Ismail via WhatsApp 📱
+      </a>
+    </div>
+  </div>
 
   <script>
-    const csvUrl = 'https://docs.google.com/spreadsheets/d/1gqh5yeIhlEnVxGoVdkT3SGainOLtwYDfSVlCM4BNn3Y/export?format=csv&gid=0';
-
-    fetch(csvUrl)
-      .then(res => res.text())
-      .then(csv => {
-        const rows = csv.trim().split('\n');
-        const tableBody = document.querySelector('#hargaTable tbody');
-
-        rows.slice(1).forEach(row => {
-          const cols = row.split(',');
-          const tr = document.createElement('tr');
-
-          cols.forEach(text => {
-            const td = document.createElement('td');
-            td.textContent = text;
-            tr.appendChild(td);
-          });
-
-          tableBody.appendChild(tr);
-        });
-      })
-      .catch(err => {
-        console.error('Gagal memuat data:', err);
-      });
+    function togglePanel() {
+      const panel = document.getElementById('panel');
+      panel.style.display = panel.style.display === 'none' || panel.style.display === '' ? 'block' : 'none';
+    }
   </script>
-</body>
-</html>
+  
 </body>
 </html>
