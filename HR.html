@@ -24,7 +24,8 @@
       .then(response => response.text())
       .then(data => {
         const rows = data.trim().split('\n');
-        const tableBody = document.querySelector('#hargaTable tbody');l
+        const tableBody = document.querySelector('#hargaTable tbody');
+
         rows.forEach((row, index) => {
           // Lewatkan baris header
           if (index === 0) return;
