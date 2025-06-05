@@ -5,9 +5,9 @@ body {
   background: #f9f9f9;
   overflow-x: hidden;
 }
-
 .beranda {
   background-color: #51c26676;
+  margin: 0;
 }
 /* Area hero/banner utama dengan background gradasi dan teks putih */
 .hero {
@@ -32,6 +32,7 @@ body {
   font-size: 24px; /* ukuran tulisan */
   font-weight: bold; /* tulisan tebal */
   color: white;
+    background-color:;
 }
 
 .nav-links {
@@ -43,7 +44,7 @@ body {
   padding: 0;
   margin: 0;
   gap: 0px;
-  background-color: #333;
+  background-color: #eae1e19c;
   border-radius: 10px;
 }
 
@@ -66,19 +67,19 @@ margin: 0;
   display: inline-block; /* pastikan tombol sejajar */
   color: white;
   text-decoration: none;
-  padding: 4px 8px;       /* kecilkan padding tombol */
-  margin: 0;              /* hilangkan margin jika ada */
+  padding: 10px 10px;       /* kecilkan padding tombol */
+  margin: 10;              /* hilangkan margin jika ada */
   transition: all 0.3s ease;
 }
 
 
 /* Efek saat diklik */
-.nav-links li a:active {
-  background-color: #555;
+.nav-links li a.active {
+  background-color: #5c40f7;
   box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
   border-radius: 5px;
+  color: white;
 }
-
 /* Efek saat hover */
 .nav-links li a:hover {
   background-color: #444;
@@ -179,7 +180,7 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    gap: 5px;
+    gap: 10px;
   }
 
   .hero-text h1 {
