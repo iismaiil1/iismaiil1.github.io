@@ -1,11 +1,6 @@
 /* Reset */
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  margin: 0;
+  margin: 5px;
   font-family: sans-serif;
   background: #f9f9f9;
   overflow-x: hidden;
@@ -19,26 +14,48 @@ body {
 .nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-between; /* <- tambahkan ini */
   align-items: center;
-  background-color: #333;
-  padding: 10px 20px;
-  border-radius: 0px;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
+  background-color: #444;
+  padding: 10px 10px;
   color: white;
 }
+
+/* style.css */
+.header {
+  justify-content: center;
+  position: relative; /* penting untuk anchor elemen absolut di dalamnya */
+  height: 60px;
+  background-color: #444; /* agar kelihatan */
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    border: 5px 5px solid #ccc;
+    border-radius: 10px;
+    background-color: #eae1e19c;
+    padding: 8px;
+    width: 100%;
+  }
+}
+  .hero-text h1 {
+    font-size: 28px;
+  }
+.logo {
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+  }
 
 .nav-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  list-style: none;
+  list-style: none; /* hilangkan titik ul */
   background-color: #eae1e19c;
   border-radius: 10px;
+  border: 3px solid #ccc; /* Tambahkan garis border */
+  padding: 8px 8px; /* Supaya konten tidak nempel ke garis */
 }
 
 .nav-links li a {
@@ -78,11 +95,11 @@ body {
   max-width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
-  background: linear-gradient(10deg, #543d71 10%, #5adc3ccd 50%, #f50d28cd 30%);
+  background: linear-gradient(10deg, #543d71 10%, #eaeaeaea 50%, #f50d28cd 30%, #f50d28cd 30%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine 2.5s infinite linear;
+  animation: shine 3.5s infinite linear;
 }
 
 @keyframes shine {
