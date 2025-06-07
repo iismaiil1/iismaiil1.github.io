@@ -23,13 +23,19 @@
         <li><a href="contact.html">  Kontak</a></li>
       </ul>
     </nav>
-      <header class="hero">
-    <div class="hero-text"> 
+<header class="hero">
+  <video autoplay muted loop class="hero-video">
+     <p>Jasa pijat, servis rumah, dan karya seni lukis dalam satu layanan personal</p> </v>
+    <source src="v1.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="hero-overlay">
+    <div class="hero-text">
       <h1>Sentuhan yang Menyembuhkan</h1>
-      <p>Jasa pijat, servis rumah, dan karya seni lukis dalam satu layanan personal</p>
       <a href="contact.html" class="btn-primary">Hubungi Sekarang</a>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- Tombol download -->
   <!-- Script peringatan loading -->
@@ -73,7 +79,7 @@
   <p style="margin: 0; text-align: center; color: #c0392b; font-weight: bold;">
     Catatan: Layanan ini bukan pengganti penanganan medis. Jika Anda mengalami
     gejala berat atau kronis, harap segera berkonsultasi dengan tenaga medis
-    profesional. atawaha adokter
+    profesional. atawaha dokter
   </p>
 </div>
 
@@ -121,58 +127,29 @@ Website ini buatan sendiri—karya tangan yang menyatukan urat-urat saraf dan me
 <!-- Container video yang responsif dan relative supaya tombol bisa diposisikan absolut -->
 <style>
   .video-container {
-    position: relative;        /* Supaya tombol bisa diposisikan relatif terhadap container */
-    width: 640px;              /* Lebar video */
-    max-width: 100%;           /* Supaya responsif di layar kecil */
+    position: relative
   }
   video {
     width: 100%;               /* Video menyesuaikan lebar container */
     height: auto;              /* Tinggi proporsional */
     display: block;            /* Hilangkan spasi bawah video */
   }
-  /* Tombol suara custom */
-  .btn-sound {
-    position: absolute;        /* Posisi absolut relatif ke container */
-    bottom: 100px;              /* Jarak 40px dari bawah container (naik dari posisi default 10px) */
-    right: 10px;               /* Jarak 10px dari kanan container */
-    background: rgba(0,0,0,0.6); /* Background semi transparan hitam */
-    border: none;              /* Hilangkan border default */
-    color: white;              /* Warna teks putih */
-    padding: 8px 12px;         /* Ruang dalam tombol */
-    font-size: 50px;           /* Ukuran font cukup besar */
-    border-radius: 5px;        /* Sudut membulat */
-    cursor: pointer;           /* Cursor pointer saat hover */
-    z-index: 10;               /* Pastikan tombol di atas video */
-  }
+ 
 </style>
 
 <div class="video-container">
   <!-- Video dengan autoplay, tanpa suara awal supaya autoplay bisa jalan, dan controls bawaan -->
+  <video id="myVideo" src="v1.mp4" autoplay muted controls></video>
+
   <video id="myVideo" src="ustad.mp4" autoplay muted controls></video>
 
-  <!-- Tombol suara custom -->
-  <button class="btn-sound" id="soundBtn">🔇</button>
-</div>
 
+</div>
 <script>
   const video = document.getElementById('myVideo');
   const soundBtn = document.getElementById('soundBtn');
 
-  // Ketika tombol suara diklik, toggle mute/unmute video
-  soundBtn.addEventListener('click', () => {
-    if (video.muted) {
-      video.muted = false;       // Suara aktifkan
-      soundBtn.textContent = '🔊'; // Ganti ikon jadi suara nyala
-    } else {
-      video.muted = true;        // Suara dimatikan (mute)
-      soundBtn.textContent = '🔇'; // Ganti ikon jadi mute
-    }
-  });
 
-  // Jika volume berubah (misalnya pakai kontrol bawaan), sinkronkan ikon tombol custom
-  video.addEventListener('volumechange', () => {
-    soundBtn.textContent = video.muted ? '🔇' : '🔊';
-  });
 </script>
   
 </div>

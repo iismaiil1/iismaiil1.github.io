@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET BAWAAN DAN BODY */
 body {
   margin: 5px;
   font-family: sans-serif;
@@ -6,116 +6,205 @@ body {
   overflow-x: hidden;
 }
 
+/* BERANDA */
 .beranda {
-  background-color: #51c26676;
+  background-color: #51c26676; /* Hijau transparan */
   color: black;
 }
 
+/* NAVIGASI ATAS */
 .nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* <- tambahkan ini */
+  justify-content: space-between;
   align-items: center;
   background-color: #444;
-  padding: 10px 10px;
+  padding: 10px;
   color: white;
 }
 
-/* style.css */
+/* HEADER UTAMA */
 .header {
   justify-content: center;
-  position: relative; /* penting untuk anchor elemen absolut di dalamnya */
+  position: relative;
   height: 60px;
-  background-color: #444; /* agar kelihatan */
+  background-color: #0b0707;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    border: 5px 5px solid #ccc;
-    border-radius: 10px;
-    background-color: #eae1e19c;
-    padding: 8px;
-    width: 100%;
-  }
-}
-  .hero-text h1 {
-    font-size: 28px;
-  }
+/* LOGO TENGAH */
 .logo {
-    text-align: center;
-    width: 100%;
-    font-size: 22px;
-  }
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  
+    /* Gradasi warna biru seperti air */
+  background: linear-gradient(90deg, #D4AF37,  #eaeaea, #0077be, #eaeaea, #D4AF37);
 
+  /* Ukuran background besar untuk animasi bergelombang */
+  background-size: 300% 100%;
+
+  /* Klip background ke bentuk huruf */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animasi lembut seperti ombak */
+  animation: waveFlow 5s ease-in-out infinite alternate;
+
+  /* Tambahan bayangan agar huruf lebih nyata */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
+}
+
+
+/* keterangan */
+.keterangan {
+  text-align: center;
+  width: 100%;
+  font-size: 22px;
+  
+    /* Gradasi warna biru seperti air */
+  background: linear-gradient(90deg, #a0e9f7,  #eaeaea, #2600be, #a0e9f7);
+
+  /* Ukuran background besar untuk animasi bergelombang */
+  background-size: 300% 100%;
+
+  /* Klip background ke bentuk huruf */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animasi lembut seperti ombak */
+  animation: waveFlow 5s ease-in-out infinite alternate;
+
+  /* Tambahan bayangan agar huruf lebih nyata */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
+}
+
+
+/* NAVIGATION LINKS */
 .nav-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  list-style: none; /* hilangkan titik ul */
+  list-style: none;
   background-color: #eae1e19c;
   border-radius: 10px;
-  border: 3px solid #ccc; /* Tambahkan garis border */
-  padding: 8px 8px; /* Supaya konten tidak nempel ke garis */
+  border: 3px solid #ccc;
+  padding: 8px;
 }
 
 .nav-links li a {
-  font-size: 15px;
-  display: inline-block;
-  padding: 10px;
-  margin: 0;
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  font-size: 15px; /* Ukuran huruf */
+  font-weight: bold; /* Teks tebal */
+  color: #00ff99; /* Warna teks neon hijau */
+  background: #111; /* Latar belakang gelap */
+  border: 2px solid #00ff99; /* Garis tepi hijau neon */
+  border-radius: 20px; /* Ujung tombol membulat */
+  padding: 10px 20px; /* Ruang dalam tombol (atas-bawah & kiri-kanan) */
+  text-decoration: none; /* Hilangkan garis bawah pada tautan */
+  transition: 0.3s ease-in-out; /* Animasi halus saat hover */
+  box-shadow: 0 0 10px #00ff99, 0 0 20px transparent; /* Efek glow awal */
+  text-align: center; /* Posisikan teks ke tengah */
+  display: inline-block; /* Supaya bisa diberi padding dan lebar otomatis */
 }
 
+/* LINK AKTIF */
 .nav-links li a.active {
-  background-color: #5c40f7;
-  box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
-  border-radius: 10px;
+  font-weight: bold; /* Teks tebal */
+  background-color: #111;
+  border-radius: 20px;
+  color: white
 }
+  
 
-.nav-links li a:hover {
-  background-color: #444;
-  box-shadow: 0 0 8px #00ffff;
-  border-radius: 10px;
-}
-
+/* HERO / BANNER */
 .hero {
-  background: linear-gradient(to right, #4e54c8, #8f94fb);
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
 }
 
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  filter: brightness(0.6);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hero-text {
+  text-align: center;
+  color: white;
+  z-index: 3;
+}
+
+/* JUDUL HERO DENGAN TEKS GRADIENT */
 .hero-text h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-  display: inline-block;
-  word-wrap: break-word;
-  max-width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
-  background: linear-gradient(10deg, #543d71 10%, #eaeaeaea 50%, #f50d28cd 30%, #f50d28cd 30%);
-  background-size: 200% auto;
+  font-size: 22px; /* Ukuran huruf */
+  margin-bottom: 10px; /* Jarak ke bawah */
+  display: inline-block; /* Supaya bisa diatur width/height */
+  word-wrap: break-word; /* Supaya teks panjang bisa patah */
+  max-width: 100%; /* Supaya tidak melebar */
+  padding: 0 20px; /* Padding kiri-kanan */
+  box-sizing: border-box; /* Padding tidak menambah lebar total */
+
+  /* Gradasi warna biru seperti air */
+  background: linear-gradient(90deg, #b92929ca,  #eaeaea, #0077be);
+
+  /* Ukuran background besar untuk animasi bergelombang */
+  background-size: 300% 100%;
+
+  /* Klip background ke bentuk huruf */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine 3.5s infinite linear;
+
+  /* Animasi lembut seperti ombak */
+  animation: waveFlow 5s ease-in-out infinite alternate;
+
+  /* Tambahan bayangan agar huruf lebih nyata */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes shine {
-  100% {
-    background-position: -100% 0;
-  }
+/* Keyframes untuk animasi bergelombang lembut */
+@keyframes waveFlow {
   0% {
-    background-position: 100% 0;
+    background-position: 0% 50%; /* Mulai dari kiri */
+  }
+  100% {
+    background-position: 100% 50%; /* Ke kanan */
   }
 }
 
+
+
+/* PARAGRAF DI HERO */
 .hero-text p {
   font-size: 18px;
   margin-bottom: 20px;
 }
 
+/* TOMBOL UTAMA */
 .btn-primary {
   display: inline-block;
   padding: 10px 20px;
@@ -123,19 +212,19 @@ body {
   color: black;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 0px;
+  border-radius: 50px;
 }
 
 .btn-primary:hover {
   background: #ffa726;
+  border-radius: 50px;
+  background-color: #5c40f7;
+  box-shadow: 0 0 8px #00ffff;
+  border-radius: 10px;
 }
+  
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
+/* CONTAINER UMUM */
 .container {
   max-width: 1200px;
   margin: auto;
@@ -143,13 +232,52 @@ img {
   font-size: 18px;
 }
 
+/* GALERI */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
 }
 
-/* Media Query */
+/* SEMUA GAMBAR */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ANIMASI TEKS */
+@keyframes waveFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes flowingWater {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 300% center;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+/* RESPONSIF UNTUK <= 768px */
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
@@ -172,6 +300,10 @@ img {
     font-size: 14px;
   }
 
+  .hero {
+    height: 300px;
+  }
+
   .hero-text h1 {
     font-size: 28px;
   }
@@ -190,9 +322,10 @@ img {
   }
 }
 
+/* RESPONSIF UNTUK <= 600px */
 @media (max-width: 600px) {
   .hero-text h1 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .hero-text p {
