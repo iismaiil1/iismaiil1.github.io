@@ -10,6 +10,7 @@ body {
 .beranda {
   background-color: #51c26676; /* Hijau transparan */
   color: black;
+  
 }
 
 /* NAVIGASI ATAS */
@@ -19,7 +20,7 @@ body {
   justify-content: center; /* Tengahkan isi nav */
   align-items: center; /* Tengahkan isi nav */
   background-color: #444;
-  padding: 10px;
+  padding: 0px;
   color: white;
   text-align: center;
 }
@@ -35,9 +36,9 @@ body {
 /* LOGO TENGAH */
 .logo {
   text-align: center;
-  width: 100%;
+  width: 90%;
   font-size: 30px;
-  background: linear-gradient(90deg, #D4AF37,  #eaeaea, #0077be, #eaeaea, #D4AF37);
+  background: linear-gradient(100deg, #D4AF37,  #eaeaea, #0077be, #eaeaea, #D4AF37);
   background-size: 300% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -68,7 +69,7 @@ body {
   border-bottom: 2px solid #eaeaea;
   border-left: none;
   border-right: none;
-  padding: 15px 0; /* atas bawah saja */
+  padding: 10px 0; /* atas bawah saja */
   margin: 0; /* hilangkan jarak luar agar rata tepi layar */
   width: 100vw; /* paksa lebar penuh layar */
   box-sizing: border-box; /* pastikan padding tidak melebihi layar */
@@ -99,7 +100,7 @@ body {
   text-shadow: 2px 2px 4px rgb(246, 233, 239); /* bukan font-shadow */
 }
 
-/* HERO / BANNER */
+/* HERO / BANNER  tampilan belakang video atsu walpeper*/
 .hero {
   position: relative;
   height: 400px;

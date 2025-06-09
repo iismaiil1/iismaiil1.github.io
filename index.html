@@ -25,14 +25,18 @@
     </nav>
 <header class="hero">
   <video autoplay muted loop class="hero-video">
-    <source src="V1.mp4" type="video/mp4" />
+    <source src="v1.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
+
   <div class="hero-overlay">
     <div class="hero-text">
       <h1>Sentuhan yang Menyembuhkan</h1>
-      <p>Website ini saya buat sebagai tempat belajar dan dokumentasi pribadi. Saat ini saya juga aktif sebagai tukang pijat dengan nama layanan 'Pijat Um Ismail'. Konten akan terus diperbarui seiring waktu."
-</p>
+      <p>
+        Website ini saya buat sebagai tempat belajar dan dokumentasi pribadi.
+        Saat ini saya juga aktif sebagai tukang pijat dengan nama layanan
+        'Pijat Um Ismail'. Konten akan terus diperbarui seiring waktu.
+      </p>
       <a href="contact.html" class="btn-primary">Hubungi Sekarang</a>
     </div>
   </div>
@@ -57,8 +61,8 @@
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color transform 0.2s;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   ">
     <i class="fa-solid fa-download" style="margin-right: 8px;"></i>
     Download Aplikasi
@@ -75,14 +79,7 @@
     }
   </style>
 
-<!-- Peringatan medis -->
-<div style="background-color: #ffffff; padding: 20px; margin: 30px auto; max-width: 800px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); border-radius: 8px;">
-  <p style="margin: 0; text-align: center; color: #c0392b; font-weight: bold;">
-    Catatan: Layanan ini bukan pengganti penanganan medis. Jika Anda mengalami
-    gejala berat atau kronis, harap segera berkonsultasi dengan tenaga medis
-    profesional. atawaha dokter
-  </p>
-</div>
+
 
 <!-- Garis pemisah -->
 <hr style="margin: 30px auto; width: 90%; border: none; border-top: 1px solid #ccc;">
@@ -145,9 +142,15 @@ Awalnya saya hanya iseng membuat website untuk belajar dan mengasah keterampilan
   <!-- Video dengan autoplay, tanpa suara awal supaya autoplay bisa jalan, dan controls bawaan -->
   <video id="myVideo" src="V1.mp4" autoplay muted controls></video>
 
-  <video id="myVideo" src="ustad.mp4" autoplay muted controls></video>
-
-
+ <!-- Peringatan medis -->
+<div style="background-color: #ffffff; padding: 20px; margin: 30px auto; max-width: 800px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); border-radius: 8px;">
+  <p style="margin: 0; text-align: center; color: #c0392b; font-weight: bold;">
+    Catatan: Layanan ini bukan pengganti penanganan medis. Jika Anda mengalami
+    gejala berat atau kronis, harap segera berkonsultasi dengan tenaga medis
+    profesional. atawaha dokter
+  </p>
+</div>
+ 
 </div>
 <script>
   const video = document.getElementById('myVideo');
