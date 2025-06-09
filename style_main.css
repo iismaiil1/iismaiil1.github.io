@@ -204,11 +204,65 @@ body {
   font-size: 18px;
 }
 
-/* GALERI */
+/* ===============================
+   GAYA UTAMA UNTUK GALERI GRID
+   =============================== */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+  /* Membuat kolom otomatis sesuai ukuran layar dengan lebar minimal 120px */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px; /* Jarak antar gambar */
+}
+
+
+/* ============================================
+   RESPONSIF UNTUK LAYAR SANGAT KECIL (HP MINI)
+   Maksimal lebar layar: 500px
+   Menjadikan 1 gambar per baris agar tidak terlalu kecil
+   ============================================ */
+@media (max-width: 500px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ============================================
+   RESPONSIF UNTUK TABLET ATAU LAYAR SEDANG
+   Ukuran antara 600px sampai 800px
+   Menampilkan 3 gambar per baris
+   ============================================ */
+@media (min-width: 600px) and (max-width: 800px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ============================================
+   GAYA UNTUK SEMUA GAMBAR
+   Agar gambar tidak meluber dan tetap proporsional
+   ============================================ */
+.gallery-grid img {
+  max-width: 100%; /* Membuat gambar tidak keluar dari kolom */
+  height: auto;    /* Menjaga proporsi asli gambar */
+  display: block;  /* Menghilangkan celah bawaan gambar inline */
+  border-radius: 8px; /* Opsional: sudut sedikit membulat agar lebih manis */
+  cursor: pointer; /* Menandakan gambar bisa diklik */
+  transition: transform 0.3s ease; /* Efek animasi halus saat hover */
+  
+  /* Tambahan supaya gambar tampil kecil dulu */
+  width: 120px;      /* Lebar tetap 120px, sesuai kolom minimal */
+  height: 120px;     /* Buat kotak persegi untuk thumbnail */
+  object-fit: cover; /* Supaya gambar terpotong rapi tanpa melar */
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05); /* Membesarkan sedikit saat disentuh (hover) */
+  
+  /* ======================================
+   akhir aturan galleri
+   ======================================== */
 }
 
 /* SEMUA GAMBAR */

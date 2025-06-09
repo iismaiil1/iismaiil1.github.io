@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="style_main.css" />
 </head>
 <body>
-<nav class="nav">
-  <div class="logo">Um Ismail Massage</div>
+  <nav class="nav">
+    <div class="logo">Um Ismail Massage</div>
     <ul class="nav-links">
       <li><a href="index.html">Beranda</a></li>
       <li><a href="about.html">Tentang</a></li>
@@ -17,22 +17,76 @@
       <li><a href="contact.html">Kontak</a></li>
     </ul>
   </nav>
-<section class="gallery-section">
-  <div class="container">
-    <h1>Galeri</h1>
-    
-    <!-- Di sinilah gallery-grid diletakkan -->
-    <div class="gallery-grid">
-      <img src="farfum.jpg" alt="Pijat Refleksi" />
-      <img src="kaki.webp" alt="Servis Rumah" />
-      <img src="kepala.jpg" alt="Lukisan Realis" />
-       <img src="saraf.jpg" alt="Pijat Refleksi" />
-      <img src="stenosis-spinal" alt="Servis Rumah" />
-      <img src="ful-saraf.jpg" alt="Lukisan Realis" />
-    </div>
+
+  <section class="gallery-section">
+    <div class="container">
+      <h1>Galeri</h1>
     </div>
 
+
+    <!-- Galeri gambar -->
+<div class="gallery-grid">
+  <a href="farfum.jpg" target="_blank">
+    <img src="farfum.jpg" alt="Pijat Refleksi" />
+  </a>
+
+  <a href="kaki.webp" target="_blank">
+    <img src="kaki.webp" alt="Servis Rumah" />
+  </a>
+
+  <a href="kepala.jpg" target="_blank">
+    <img src="kepala.jpg" alt="Lukisan Realis" />
+  </a>
+
+  <a href="saraf.jpg" target="_blank">
+    <img src="saraf.jpg" alt="Pijat Refleksi" />
+  </a>
+
+  <a href="stenosis-spinal" target="_blank">
+    <img src="stenosis-spinal" alt="Servis Rumah" />
+  </a>
+
+  <a href="ful-saraf.jpg" target="_blank">
+    <img src="ful-saraf.jpg" alt="Lukisan Realis" />
+  </a>
+
+  <a href="stenosis-spinal.jpg" target="_blank">
+    <img src="stenosis-spinal.jpg" alt="Stenosis Spinal" />
+  </a>
+</div>
+  </section>
+
+  <!-- Modal (gambar besar akan tampil di sini saat diklik) -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img" alt="Gambar Besar" />
   </div>
-</section>
+
+  <!-- JavaScript Modal -->
+  <script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    const close = document.querySelector(".close");
+
+    // Event klik pada setiap gambar di galeri
+    document.querySelectorAll('.gallery-grid img').forEach(img => {
+      img.addEventListener('click', () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+      });
+    });
+
+    // Event klik tombol tutup
+    close.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // Klik area luar gambar untuk menutup modal
+    modal.onclick = function (e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
