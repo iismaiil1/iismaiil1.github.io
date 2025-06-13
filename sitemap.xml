@@ -2,7 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://iismaiil1.github.io/</loc>
-    <lastmod>2025-06-12</lastmod>
-    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://iismaiil1.github.io/about.html</loc>
+  </url>
+  <url>
+    <loc>https://iismaiil1.github.io/services.html</loc>
+  </url>
+  <url>
+    <loc>https://iismaiil1.github.io/gallery.html</loc>
+  </url>
+  <url>
+    <loc>https://iismaiil1.github.io/contact.html</loc>
   </url>
 </urlset>
